@@ -36,3 +36,9 @@ When creating `Scraper` object make sure to pass the correct path to the driver.
 ### Disclaimer
 
 This tool is for educational purposes only.
+
+### Branch No (By n0mad_star)
+
+This works quite diferent.
+Make a .env file like the file env_example, then build the docker.
+You can use podman if you want too.
