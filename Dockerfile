@@ -1,4 +1,4 @@
-FROM python:3.14-rc-alpine
+FROM python:latest-alpine
 
 # Copy the current directory contents into the container at /app
 COPY ./ig-scr-image /app
@@ -12,10 +12,7 @@ RUN apk add --no-cache \
     wget \
     unzip \
     chromium \
-    chromium-chromedriver \
-    zlib-dev \
-    build-base
-    
+    chromium-chromedriver
 
 # Set the environment variable for Chrome
 ENV CHROME_BIN=/usr/bin/chromium-browser

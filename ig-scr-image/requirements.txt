@@ -1,0 +1,13 @@
+selenium
+beautifulsoup4
+tqdm
+wget
+python-dotenv
+webdriver-manager
+pillow
+instagrapi
+ollama
+scrapy
+opencv-python
+numpy
+
