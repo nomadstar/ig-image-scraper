@@ -4,22 +4,12 @@ import os
 
 load_dotenv()
 
-<<<<<<<< Updated upstream:virtualscrap/example.py
-username = os.getenv('IG_USERNAME')
-password = os.getenv('IG_PASSWORD')
-
-if __name__ == "__main__":
-    credentials = {
-        'username': username,
-        'password': password
-========
-
 if __name__ == "__main__":
     credentials = {
         'username': os.getenv('IG_USER'),
         'password': os.getenv('IG_PASS')
->>>>>>>> Stashed changes:ig-scr-image/example.py
-    }
+
+}
     urls_path = 'scraped/urls.txt'
     Scraper(login=credentials,
             max_samples=10,
