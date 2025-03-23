@@ -8,6 +8,5 @@ pillow
 instagrapi
 ollama
 scrapy
-opencv-python
 numpy
 
