@@ -1,9 +1,16 @@
 from ihs import Scraper, Downloader
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+username = os.getenv('IG_USERNAME')
+password = os.getenv('IG_PASSWORD')
 
 if __name__ == "__main__":
     credentials = {
-        'username': 'your_username',
-        'password': 'your_password'
+        'username': username,
+        'password': password
     }
     urls_path = 'scraped/urls.txt'
     Scraper(login=credentials,
