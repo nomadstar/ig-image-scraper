@@ -10,7 +10,7 @@ if __name__ == "__main__":
         'password': os.getenv('IG_PASS')
 
 }
-    urls_path = 'scraped/urls.txt'
+    urls_path = './scraped/urls.txt'
     Scraper(login=credentials,
             max_samples=10,
             url_save_path=urls_path,

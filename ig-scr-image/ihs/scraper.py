@@ -15,13 +15,11 @@ class Scraper:
     WAIT_PAGE_LOAD = 4
     HUMAN_DELAY = 2
 
-    def __init__(self,
-                 login: dict = None,
-                 driver_path: str = 'driver/chromedriver.exe',
-                 url_save_path: str = 'log/urls.txt',
-                 max_samples: int = None) -> None:
+    def __init__(self, login: dict, driver_path: str, url_save_path: str, max_samples: int = None) -> None:
         self.login = login
-        self.driver = webdriver.Chrome(driver_path)
+        options = webdriver.ChromeOptions()
+        options.add_argument(f'--user-data-dir={driver_path}')
+        self.driver = webdriver.Chrome(options=options)
         self.is_logged = False
         self.logger = Logger(url_save_path)
         if not max_samples:
